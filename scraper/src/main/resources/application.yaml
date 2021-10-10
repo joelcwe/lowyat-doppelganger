@@ -1,0 +1,13 @@
+spring:
+  elasticsearch:
+    rest:
+      uris: dev.k8s.internal:443
+      username: elastic
+      password: ${ELASTIC_REST_PASSWORD}
+
+
+logging.level.org.springframework.data.elasticsearch.client.WIRE: trace
+
+self-signed:
+  trust-store: classpath:elastic.jks
+  trust-store-password: elastic
